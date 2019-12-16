@@ -1,14 +1,14 @@
-title: ruvieye's log
-email: ruvieye@naver.com
+title: yuripapago's log
+email: yuripapago@gmail.com
 description: Continuous devlog
-author: ruvieye
+author: yuripapago
 baseurl: ""
-url: "http://ruvieye.github.io"
+url: "http://yuripapago.github.io"
 
 # Social Profiles
-twitter_username: ruvieye
-github_username: ruvieye
-facebook_username: ruvieye
+twitter_username: yuripapago
+github_username: yuripapago
+facebook_username: yuripapago
 
 # Build settings
 markdown: kramdown
