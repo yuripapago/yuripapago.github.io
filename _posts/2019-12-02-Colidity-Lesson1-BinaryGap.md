@@ -1,15 +1,15 @@
 ---
-title:  "바이너리갭"
+title:  "BinaryGap"
 excerpt: "코딜리티"
 
 categories:
   - Coding
 tags:
   - Coding
-  - Coldilty
+  - Codility
   - BinaryGap
   - 코딜리티
-last_modified_at: 2019-12-20T03:00:00
+#last_modified_at: 2019-12-20T03:00:00
 
  
 #toc : true
@@ -19,26 +19,19 @@ last_modified_at: 2019-12-20T03:00:00
 ---
 
 코딜리티의 첫번째 문제. 
+주어진 정수값에 대해서 이진 변환 후 연속적으로 가장 많이 발생한 0의 개수를 구하는 문제였다.
+
 여러가지 풀이 방법이 있겠지만 `Integer.toBinaryString()` 을 이용하여 풀어냈다.
 
 
 ```java
-
-public class No01_BinaryGap {
-
-    public static void main(String[] args) {
-        int solution = solutionByBinaryTransform(1041);
-        System.out.print(solution);
-    }
-
-
-    public static int solutionByBinaryTransform(int num) {
+    public int solution(int num) {
         String s = Integer.toBinaryString(num);
         System.out.println("binary : " + s);
-
+    
         int count = 0;
         int countTemp = 0;
-
+    
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
                 if (count < countTemp) {
@@ -50,23 +43,31 @@ public class No01_BinaryGap {
                 countTemp++;
             }
         }
-
+    
         return count;
-
     }
-}
+ 
 ```
+ 
 
-다른 문제풀이를 검색해보면 여러 방법이 존재하는데 그중 `String.strip()`을 이용한 방법이 흥미로웠다.
-여기서 `String.strip()` 이라는 메서드를 또 배워간다.
+이진변환에 대해서도 직접 대충 구현해 보았다.
 
 ```java
-String.strip 사용법
+    @Test
+    public void testBinary() {
+        int data = 10;
+        int remain = 0;
+        
+        List<Integer> arr = new ArrayList<>();
 
-```
+        while (data > 0) {
+            remain = data % 2;
+            data = data / 2;
+            arr.add(remain);
+        }
 
-
-`Integer.toBinary` 이진변환법에 대해서도 직접 구현해 보았다.
-```java
-
+        for (int i = arr.size() - 1; i >= 0; i--) {
+            System.out.print(arr.get(i));
+        }
+    }
 ```
