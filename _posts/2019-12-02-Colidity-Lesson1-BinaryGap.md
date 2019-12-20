@@ -1,6 +1,5 @@
 ---
 title:  "BinaryGap"
-excerpt: "코딜리티"
 
 categories:
   - Coding
@@ -9,7 +8,7 @@ tags:
   - Codility
   - BinaryGap
   - 코딜리티
-#last_modified_at: 2019-12-20T03:00:00
+last_modified_at: 2019-12-20T03:00:00
 
  
 #toc : true

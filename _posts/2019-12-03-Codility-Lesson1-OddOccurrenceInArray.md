@@ -1,6 +1,5 @@
 ---
 title:  "OddOccurrencesInArray"
-excerpt: "코딜리티"
 
 categories:
   - Coding
