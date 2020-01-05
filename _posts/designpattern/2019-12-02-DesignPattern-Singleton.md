@@ -33,11 +33,11 @@ public class Singleton {
 다만 이 코드는 심각한 결함이 존재한다.
 객체 생성과정에서 멀티스레드로 접근하는 경우 싱글톤 객체 생성을 보장하지 못한다. 즉 thread-safe 하지 못하는 것이고
 이를 위해 생성자에 `synchronized` 키워드가 포함되어야 한다.
-이때 `synchronized` 에 의한 성능 감소를 최소화하고자 `volatile` 을 이용한 방법을 사용하기도 했었다.
+`volatile` 키워드도 포함된다. 이 부분은 별도로 포스팅 예정이다.
 
 ```java
 public class Singleton {
-    private volatile static Singleton instance = null;
+    private volatile static Singleton instance = null;  //volatile 의 역할?
 
     private Singleton() {
         System.out.println("instance construct");
